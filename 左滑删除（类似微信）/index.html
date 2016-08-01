@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>左滑删除（类似微信消息删除）</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.min.css">
+    <style type="text/css">
+        ul {
+            width: 100%;
+            overflow: hidden;
+        }
+        li {
+            position: relative;
+            width: 100%;
+            line-height: 22px;
+            padding: 10px;
+            border-bottom: solid 1px #333;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .delete {
+            position: absolute;
+            top: 0;
+            right: -62px;
+            width: 62px;
+            height: 42px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 42px;
+            color: #fff;
+            background-color: #f56058;
+        }
+        .delete-show {
+            right: -21px;
+        }
+    </style>
+</head>
+<body>
+   
+   <ul id="list">
+   </ul>
+
+</body>
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script type="text/javascript">
+    var list = $('#list');
+    for(var i=0;i<20;i++) {
+        list.append('<li>' + i + '<span class="delete">删除</span>' +'</li>');
+    }
+
+    var li = $('#list > li');
+    var start = 0;
+    li.on('touchstart', function(event) {
+        start = -62;
+        var self = $(this);
+        self.children('.delete').removeClass('delete-show');
+        self.siblings().removeClass('delete-show');
+    });
+    li.on('touchmove', function(event) {
+        if(start>20) return;
+        var self = $(this);
+        self.children('.delete').css('right', (start++) + 'px');
+
+    });
+    li.on('touchend', function(event) {
+        //if(start>20) return;
+        var self = $(this);
+        if(start>=-28) self.children('.delete').addClass('delete-show');
+        else self.children('.delete').removeClass('delete-show');
+        event.preventDefault();
+    });
+</script>
+
+</html>
