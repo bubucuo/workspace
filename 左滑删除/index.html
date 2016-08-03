@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>左滑删除（类似微信消息删除）</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.min.css">
+    <style type="text/css">
+        ul {
+            width: 100%;
+            overflow: hidden;
+        }
+        li {
+            position: relative;
+            width: 100%;
+            line-height: 22px;
+            padding: 10px;
+            border-bottom: solid 1px #333;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .delete {
+            position: absolute;
+            top: 0;
+            right: -62px;
+            width: 62px;
+            height: 42px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 42px;
+            color: #fff;
+            background-color: #f56058;
+        }
+    </style>
+</head>
+<body>
+   
+   <ul id="list">
+   </ul>
+
+</body>
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script type="text/javascript">
+    var list = $('#list');
+    for(var i=0;i<20;i++) {
+        list.append('<li><span class="left-content">' + i + ' 消       息 消   息 消 息 消 息  消 息 消 息</span><span class="delete">删除</span>' +'</li>');
+    }
+
+    var li = $('#list > li');
+    var start = 0;
+    var deleteWidth = parseFloat($('.delete').css('width')) || 62;
+    console.log(deleteWidth)
+    function setRight(target, value) {
+        if(value<=36.4)$(target).children('.left-content').css('margin-left', (-62-value) + 'px');
+        if(value<28.2) $(target).children('.delete').css('right', value + 'px');
+    }
+    function setRight2(target, value) {
+        console.log('value', value)
+        if(value>=-62)$(target).children('.left-content').css('margin-left', (-62-value) + 'px');
+        if(value>=-62) $(target).children('.delete').css('right', value + 'px');
+    }
+    var touch, startX, startY;
+    var pageScroll = true;
+    li.on('touchstart', function(event) {
+        start = parseFloat($(this).children('.delete').css('right'));
+        pageScroll = false;
+        touch = event.targetTouches[0];
+        startX = touch.pageX;
+        startY = touch.pageY;
+
+    });
+    li.on('touchmove', function(event) {
+        touch = event.targetTouches[0];
+        var startX2 = touch.pageX;
+        startY2 = touch.pageY;
+        var triangle = getTriangleSide(startX, startY, startX2, startY2);
+        if(triangle.z > 10 && getAngle(triangle) > 55) {
+            var change = startX2 - startX;
+            console.log('start', start)
+            if(start<=36.4 && change<0) {
+               setRight(this, start += 8.2);
+            } else if(start>=-62 && change>0) {
+               setRight2(this, start -= 8.2);
+            }
+            event.preventDefault();
+        } else {
+            pageScroll = true;
+        }        
+    });
+    li.on('touchend', function(event) {
+        var touchEvent = (start == -62 && parseFloat($(this).children('.delete').css('right')) == -62);
+        var dbs = deleteBtnShow();
+        if(touchEvent && !pageScroll) {//如果是点击事件
+            if(dbs==-1) {
+                window.location.href = 'https://m.baidu.com/';
+            }
+        } else {console.log(start)
+            touch = event.changedTouches[0];
+            var distance = Math.abs(touch.pageX - startX);
+            var self = $(this);
+            if(Math.abs(distance)>=20) setRight(this, 20);
+            else setRight(this, -62);
+            event.preventDefault();
+        }        
+    });
+    function deleteBtnShow() {
+        var deleteBtn = $('.delete');
+        for(var i=0; i<li.length; i++) {
+            console.log(parseFloat($(deleteBtn[i]).css('right')))
+            if(parseFloat($(li[i]).children('.delete').css('right'))==20) {
+                setRight(li[i], -62);
+                return i;
+            }
+        }
+        return -1;
+    }
+    function getTriangleSide(x1, y1, x2, y2) {
+        var x = Math.abs(x1 - x2);
+        var y = Math.abs(y1 - y2);
+        var z = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
+        return {
+            x: x,
+            y: y,
+            z: z
+        };
+    }
+    function getAngle(triangle) {
+        var cos = triangle.y / triangle.z;
+        var radina = Math.acos(cos);
+
+        return 180 / (Math.PI / radina);
+    }
+</script>
+
+</html>
