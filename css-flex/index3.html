@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1">
+	<style> 
+		body {
+			position: relative;
+		}
+		div.container
+		{
+		width:300px;
+		border:1em solid;
+		}
+		div.box
+		{
+		box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+		width:50%;
+		border:1em solid red;
+		float:left;
+		}
+		.btn {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 10px;
+			line-height: 100px;
+			background-color: green;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+	<div class="box">这个 div 占据左半部分。</div>
+	<div class="box">这个 div 占据右半部分。</div>
+	</div>
+
+
+	<div class="btn">haha</div>
+
+</body>
+</html>

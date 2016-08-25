@@ -1,0 +1,24 @@
+.dis-flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+}
+.dis-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+.flex-dir {
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+}
+.align-items {
+  align-items: center;
+  -webkit-align-items: center;
+}
+.box-align {
+  -webkit-box-align: center;
+}

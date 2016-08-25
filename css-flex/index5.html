@@ -1,0 +1,131 @@
+<html><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>湖北卫视《我为喜剧狂》抢红包活动，快来百度钱包领取！</title>
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta content="telephone=no" name="format-detection">
+        <meta content="address=no" name="format-detection">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+        <link href="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/default.css" rel="Stylesheet">  
+        <style type="text/css">
+         #container{
+            min-height: 100%;
+            background:url(https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/bg0.jpg) #331606 no-repeat;
+            background-size: 100% 100%;
+          }
+          #hbao{background:url(https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/hbao.png) no-repeat;background-size: cover ;width: 88%;height: 22%;margin: 0 auto;min-width: 240px;min-height: 125px;margin-bottom: 3px;}
+          #go_prize{margin: 29% auto 0;display: inline-block;color: #d92313;font-size: 17px;font-weight: bold;width: 52%;line-height: 34px;border-radius: 6px;text-align: center;box-shadow: 0 1px 1px #cf8902;background-color: #ffe88b;background-image: linear-gradient(to bottom,#ffe88b,#ffda48);}
+          #footerLogo{width: 100%;}
+          #foot_desc{font-weight: bold;color:#bc9f6e;text-align: center;margin-bottom: 60px;}
+        </style>
+    </head>
+    <body>
+      <img src="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/comedy.jpg" width="0" height="0">
+      <div id="container">
+      <div id="main">
+        <img src="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/logo.png" id="logo">
+        <img src="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/hb.png" id="hb">
+        <div id="issue">第 13 期</div>
+        <div id="hbao">
+           <a id="go_prize">点击领取</a>
+        </div>
+      </div>
+       <img src="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/imgs/footerLogo.jpg" id="footerLogo">
+        <div id="foot_desc" class="change-with-width">
+            <div style="font-size: 20px;">《我为喜剧狂》湖北卫视</div>
+            <div style="text-indent: 10px;">每周四爆笑播出21:20不见不散</div>
+        </div>
+      <footer>
+        <a href="http://qianbao.baidu.com/">qianbao.baidu.com</a>
+      </footer>
+     </div>
+
+     <div class="mask">
+        <div class="mask_tips">
+           <span> 活动已结束，请期待下一期活动！</span>
+           <a id="return" href="javascript:void(0)">我知道了</a>
+        </div>                         
+     </div>
+       <script charset="utf-8" src="https://trust.baidu.com/vcard/v.js?siteid=7859779&amp;url=https%3A%2F%2Fqianbao.baidu.com%2Fhd%2Fcomedy%2F&amp;source=&amp;rnd=972787438&amp;hm=1"></script><script src="//hm.baidu.com/hm.js?1f8f259e0f71d23769994f0874f18c35"></script><script src="/static/cms/activity-static/mobile/comedy/jquery.min.js" type="text/javascript"></script>
+       <script type="text/javascript">
+            function mask_show(show){
+                if(show){
+                    $('.mask').show(); $("#container").addClass("_container");
+                }
+                else{
+                    $('.mask').hide(); $("#container").removeClass("_container");
+                }
+            }
+            $("#return").click(function(){ 
+                mask_show(false);
+            });
+            $(document).ready(function () {
+                $.ajax({
+                    type: "GET"
+                    ,headers: { "x-baidu-ie": "utf-8" }
+                    ,url:"https://qianbao.baidu.com/huodong/11/user_bbq_query"
+                    ,data: {}
+                    ,dataType: "json"
+                    ,success: function (data) {
+                        var _result = data;
+                        var issue = _result.hd_info.curr_batch;
+                        issue = parseInt(issue) +2;
+                        $("#issue").html('第 ' +  issue + ' 期');
+
+                        var status = _result.coupon.coupon_status; //has a prize
+                       
+                        if (_result.result == 0 && status > 1 && _result.coupon.coupon_number.toString().length > 0) { 
+                            window.location.href = "https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/index_prize.html";
+                        }
+
+                    }
+                });
+
+                $('#go_prize').click(function () {
+                    $.ajax({
+                        type: "GET"
+                        ,headers: { "x-baidu-ie": "utf-8" }
+                        ,url: "https://qianbao.baidu.com/huodong/11/user_bbq_get"
+                        ,data: {}
+                        ,dataType: "json"
+                        ,success: function (data) { 
+                          
+                        
+                            if (data.result == '5003') {
+                                 var domain = encodeURIComponent('http://baifubao.com');
+                                 var uri = encodeURIComponent(window.location.href);
+                                 var u = encodeURIComponent("http://baifubao.baidu.com/jump?uri=" + uri + "&domain=" + domain);
+                                 var url = "http://wappass.baidu.com/passport/?login&tpl=bp&u=" + u;
+                                 window.location = url;
+                            }
+                            else if (data.result == '70003') {
+                                mask_show(true);
+                            }
+                            else if (data.result == '70001') {
+                                $('.mask_tips>span').html('活动未开始，请期待！');
+                                mask_show(true);
+                            }
+                            else if (data.result == '70006') {
+                                $('.mask_tips>span').html('抱歉，活动太火爆，红包正在补货中，稍后再来试试！');
+                                mask_show(true);
+                            }
+                            else if (data.result == '0') {
+                                window.location.href = "https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/index_prize.html";
+                            }
+                            else {
+                                $('.mask_tips>span').html('活动太火爆，系统忙不过来，请稍后再来试试！');
+                                mask_show(true);
+                            }
+                        }
+                    });
+                });
+                
+            });
+        </script>
+        <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F633d1f12a1907cba172f6a6fc3a0a312' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src=" https://hm.baidu.com/h.js?633d1f12a1907cba172f6a6fc3a0a312" type="text/javascript"></script>
+     
+
+ 
+<script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?1f8f259e0f71d23769994f0874f18c35";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script></body></html>

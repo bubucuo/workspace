@@ -6,43 +6,21 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes"><title>菜鸟教程(runoob.com)</title>
 <link rel="stylesheet" type="text/css" href="../css/common.min.css">
-<style> 
-li {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  line-height: 40px;
-  border-bottom: solid 1px #000;
-  padding: 0 10px;
-  background-color: #ddb;
-}
-.leftDesc, .rightIcon {
-  flex-grow: 0;
-}
-.leftValue {
-  flex-grow: 1;
-  padding: 0 12px;
-}
-
-a {
-  position: absolute;
-  bottom: 10px;
-  color: green;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/index.min.css">
 </head>
 <body>
 
-
 <ul>
-  <li> <span class="leftDesc">开户行</span> <span class="leftValue">包商银行</span> <span class="rightIcon">></span> </li>
-  <li> <span class="leftDesc">开户行</span> <span class="leftValue"></span> <span class="rightIcon">></span> </li>
+  <li class="list"> <span class="leftDesc">开户行</span> <span class="leftValue">包商银行</span> <span class="rightIcon">></span> </li>
+  <li class="list"> <span class="leftDesc">开户行</span> <span class="leftValue"></span> <span class="rightIcon">></span> </li>
+  <li class="list"> <span class="leftDesc">开户行</span> <input class="leftValue" placeholder="输入内容"> <span class="rightIcon">></span> </li>
 </ul>
-
-
+<p>-----------------------</p>
+<ul class="list">
+  <li class="leftDesc">开户行</li>
+  <li class="leftValue">包商银行</li> 
+  <li class="rightIcon">></li>
+</ul>
 
 <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">参考：阮大叔的文章>> </a>
 </body>

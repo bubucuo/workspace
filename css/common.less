@@ -4,9 +4,21 @@ body {
 body {
     background-color: #000;
 }
-body, * {
+body, *, input {
 	margin: 0;
 	padding: 0;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+*, button, select, area, textarea, input, input:focus, input:disabled, a, a:focus, a:active, a:hover, a:visited{
+    outline: none;
+    border: none;
+    border-radius: 0;
+    border-radius: 0;
+    font-weight: normal;
+    font-style: normal;
+    background-color: transparent;
 }
 a {
 	text-decoration: none;
@@ -14,7 +26,23 @@ a {
 ul {
 	list-style-type: none;
 }
-* {
+*, a, input {
     color: #fff;
+    font-size: 14px;
     font-family: 'microsoft yahei';
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+}
+.index-list {
+    line-height: 25px;
+    padding: 15px;
+    background-color: #000;
+    font-size: 18px;
+    a {
+        display: block;
+        border-bottom: solid 1px #fff;
+    }
 }
