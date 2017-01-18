@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>多叉树递归</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.min.css">
+    <style type="text/css">
+    	#catgoryList {
+    		position: relative;
+    		background-color: #bbb;
+    	}
+    	#catgoryList:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 3px;
+			background-color: #bbb;
+		}
+    	.item {
+    		line-height: 22px;
+    		padding: 10px 20px 10px 0;
+    		border-bottom: dashed 2px white;
+    	}
+    	.radio {
+    		display: inline-block;
+    		width: 20px; 
+    		height: 20px;
+    		line-height: 22px;
+    		margin-right: 6px;
+    		text-align: center;
+    		color: red;
+    		font-weight: bold;
+    		font-size: 18px;
+    		border: solid 2px red;
+    		border-radius: 100%;
+    	}
+    	.arrow {
+		    font-size: 20px;
+    		float: right;
+    	}
+    	.depth0 {
+    		margin-left: 20px;
+    	}
+    	.depth1 {
+    		margin-left: 50px;
+    	}
+       	.depth2 {
+    		margin-left: 80px;
+    	}
+    	.depth3 {
+    		margin-left: 110px;
+    	}
+    	.depth4 {
+    		margin-left: 140px;
+    	}
+    	.depth5 {
+    		margin-left: 170px;
+    	}
+    </style>
+</head>
+<body>
+	<ul id="catgoryList">
+		<li class="listItem">
+			<div class="item depth0"> 
+				<span class="radio checked"><!-- √ -->✔</span> <span class="label">分类1</span> <span class="arrow"><!-- ∧ -->∨ <span></span>
+			</div>
+			<div class="item depth1"> 
+				<span class="radio checked"><!-- √ -->✔</span> <span class="label">分类1</span> <span class="arrow"><!-- ∧ -->∨ <span></span>
+			</div>
+		</li>
+	</ul>
+
+</body>
+<script type="text/javascript" src="../js/lib/zepto.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<script type="text/javascript">
+(function() {
+	var url = 'http://unb4kualjvll.chanapp.com/chanjet/hsy/restlet/basic/ProductType/loadProductTypeTree',
+	 	option = {
+			id:0,
+			excludeDefaultType:2
+		};
+	$.getStore(url, option, drawTree, true, 'test');
+		
+	function drawTree(data) {
+		console.log(data)
+		var tree = [
+			{
+				depth: 0,
+				id: 0,
+				name: "全部分类",
+				parent: null,
+				quantity: null,	
+				children: data
+			}
+		];
+		drawNode(tree[0]);
+	}
+	function drawNode(node) {
+		var nodeHtml = 
+			'<div class="item depth' + node.depth + '">' +
+				'<span class="radio">✔</span> <span class="label">' + node.name +'</span> <span class="arrow">∨ <span></span>' +
+			'</div>'
+		;
+		var children = node.children;
+		for(var i=0; i<children.length; i++) {
+			//nodeHtml +=  
+		}
+	}
+})();
+
+
+
+	
+
+</script>
+
+</html>

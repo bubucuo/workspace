@@ -1,0 +1,844 @@
+<html lang="zh-CN"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script>var speed_start=new Date(),speed_load=null,speed_all_load=null;</script> 
+<meta charset="gbk">
+<meta name="mobile-agent" content="format=html5;url=http://wuxia.qq.com/main.shtml">
+<meta name="robots" content="all">
+<meta name="author" content="Tencent-TGideas">
+<meta name="Copyright" content="Tencent">
+<title>天涯明月刀-官方网站-腾讯游戏-电影网游新艺术，这就是武侠</title>
+<meta name="Description" content="《天涯明月刀》为国内首款定位于“电影网游”的作品，是由古龙版权委员会授权，腾讯北极光工作室研发的3D武侠题材MMORPG游戏，为武侠玩家悉心打造。电影网游新艺术，这就是武侠！">
+<meta name="Keywords" content="武侠,武侠游戏,天涯明月刀,天涯明月刀ol,武侠网游,古龙,古龙游戏">
+<!-- 设计：lyamnxu | 重构：biggxie | 创建：20160106  | 团队博客：http://tgideas.qq.com -->
+<style>
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,div,input,video,sup,sub{margin:0;padding:0;}
+ul,ol{list-style:none;}
+img{border:0;vertical-align:middle;}
+a{color:#fff;text-decoration:none;outline:none;hide-focus:expression(this.hideFocus=true);}
+em,i{font-style:normal;}
+.hid{display:none;}.loading{width:100%;position:absolute;left:0;top:50%;margin:-14px 0 0;}.mrn{margin-top:15px;}.pa{position:absolute;}
+body{background:#202020;font:14px/1.5 "\5FAE\8F6F\96C5\9ED1",arial;color:#353535;width:100%;min-width:1001px;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}
+#footer_ied{position:relative;color:#4f4f4f;font-size:12px;padding:30px 5%;text-align:center;z-index:9;}
+#footer_ied a{color:#4f4f4f;}
+@-webkit-keyframes visibleACT{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}100%{opacity:1;-webkit-transform:translate3d(0,0,0);}}
+@keyframes visibleACT{0%{opacity:0;transform:translate3d(0,-100%,0);}100%{opacity:1;transform:translate3d(0,0,0);}}
+@-webkit-keyframes hidenACT{0%{opacity:1;-webkit-transform:translate3d(0,0,0);}100%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+@keyframes hidenACT{0%{opacity:1;transform:translate3d(0,0,0);}100%{opacity:0;transform:translate3d(0,-100%,0);}}
+@-webkit-keyframes imgChange{0%{-webkit-transform:scale(1);}100%{-webkit-transform:scale(1.1);}}
+@keyframes imgChange{0%{transform:scale(1);}100%{transform:scale(1.1);}}
+.spr-h,.spr-1,.spr-2,.spr-c,.spr-ly{background-repeat:no-repeat;}
+.spr-h{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160527ydy/spr-h.png);}
+.spr-1{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160626ydy/numberspr.png);}
+.spr-2{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160701updata/spr-2.png);}
+.spr-c{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/spr-c.png);}
+.spr-ly{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/spr-ly.png);}
+.wrapper{position:relative;background:#fff;text-align:center;overflow:hidden;}
+.container{position:relative;width:1000px;margin:0 auto;text-align:left;overflow:hidden;}
+.content,.part{position:relative;}
+.header{position:absolute;top:130px;left:50%;margin:-5px 0 0 -466px;width:608px;height:279px;z-index:2;}
+.header .slogan{position:absolute;width:100%;height:100%;top:0;left:0;text-indent:-9999px;}
+.part h2{margin:0 0 50px;font-size:40px;line-height:110%;}
+.part h2 .eng{display:block;font-size:20px;font-weight:normal;font-family:tahoma,helvetica,arial,sans-serif;line-height:100%;}
+.part .container{padding:50px 0 0;}
+.head{width:100%;background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160626ydy/bg20160626.jpg) no-repeat 50% 0;}
+.head .logo{top:30px;left:30px;width:155px;height:55px;background-position:100% 0;text-indent:-9999px;}
+.head .container{height:1124px;}
+.head .content{padding:460px 0 0;z-index:1;}
+.eventsbox{margin:50px 0 0;width:100%;overflow:hidden;}
+.eventsbox .boxes{float:left;width:312px;height:280px;overflow:hidden;background:#fff;}
+.eventsbox .boxes img{display:block;width:100%;height:100%;}
+.eventsbox .haslybox{margin:0 31px 0 0;}
+.eventsbox .bnsbox{position:relative;overflow:hidden;text-align:center;}
+.rotate_content{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.rotate{position:absolute;top:0;left:0;width:100%;height:100%;-webkit-transition:left .2s ease 0s;transition:left .2s ease 0s;}
+.rotate li{position:relative;float:left;width:100%;height:100%;}
+.rotate a,.rotate img{display:block;width:100%;height:100%;position:absolute;top:0;left:0;}
+.rotate .loading{position:absolute;padding:0;left:0;top:50%;width:100%;background-color:#fff;margin-top:-10px;}
+.numbox{height:100%;text-align:center;}
+.rotate_number{position:absolute;right:2%;bottom:6%;margin-left:0;font-size:0;line-height:0;}
+.rotate_number span{display:inline-block;width:14px;height:14px;border-radius:7px;margin:0 3px;background-color:#9b9b9b;overflow:hidden;-webkit-transition:width .3s ease 0s;transition:width .3s ease 0s;}
+.rotate_number .cur{width:25px;background-color:#02b8a9;}
+.rotate_number a,.rotate_number b,.rotate_number em,.rotate_number strong{display:none;}
+.rotate_number .handheld span{width:6px;height:6px;border-radius:3px;}
+.otherlists{clear:both;width:100%;margin:30px 0 0;overflow:hidden;}
+.otherlists .ols{position:relative;width:233px;height:105px;float:left;background-color:#1c1c1c;margin:0 22px 0 0;}
+.otherlists .u{margin-right:0;}
+.otherlists .other-ct{padding:15px 25px 0;}
+.otherlists .other-tit{display:block;font-size:22px;color:#cfae69;font-weight:bold;line-height:136%;}
+.otherlists .other-info{display:block;font-size:13px;color:#aaa;line-height:115%;}
+.otherlists .sc{top:65px;left:25px;width:17px;height:17px;background-position:100% -257px;}
+.otherlists .bc{top:32px;left:159px;width:41px;height:40px;}
+.otherlists .f .bc{background-position:0 -345px;}
+.otherlists .s .bc{background-position:-256px -345px;}
+.otherlists .t .bc{background-position:-511px -345px;}
+.otherlists .u .bc{background-position:-767px -345px;}
+.otherlists .other-lk{display:block;position:absolute;top:0;left:0;width:100%;height:100%;text-indent:-9999px;background-color:#fff;filter:alpha(opacity=0);background-color:rgba(255,255,255,0);box-sizing:border-box;}
+.otherlists .other-lk:hover{border-bottom:5px solid #cfae69;}
+.view{position:absolute;width:124px;top:371px;left:677px;text-align:center;color:#000;}
+.view img{display:block;width:100%;height:124px;}
+.view .info{display:none;font-size:12px;}
+.view:hover{opacity:.9;}
+.video{position:relative;clear:both;width:100%;height:295px;background:#000;text-align:center;color:#fff;}
+.video video,.video div{display:block;position:absolute;top:0;left:0;width:100%;height:100%;}
+.vsdet{top:406px;left:370px;font-size:15px;border:3px solid #7d868e;width:137px;height:36px;font-weight:bold;}
+.vsdet .togomore{display:block;height:100%;padding:0 0 0 15px;line-height:31px;}
+.vsdet .ws{border-bottom:1px solid #fff;margin:0 10px 0 0;cursor:pointer;}
+.vsdet .ar{font-family:'黑体';color:#cf2f2d;font-size:12px;cursor:pointer;}
+.vsdet .togomore:hover .ws{margin:0 12px 0 0;color:#cfae69;border-color:#cfae69;}
+.but{position:relative;display:block;float:left;text-align:center;}
+.but .tag,.but .pretag{position:absolute;display:block;z-index:1;text-indent:-9999px;overflow:hidden;font-size:0;line-height:0;}
+.but .tag{top:0;right:0;width:78px;height:78px;background-position:100% -60px;}
+.but .clk{position:relative;display:block;width:100%;color:#fff;height:100%;font-weight:bold;overflow:hidden;z-index:5;}
+.but .clk:hover{background-color:rgba(255,255,255,.08);}
+.clk .eng{margin:-26px 0 0;font-size:9px;color:#000;opacity:.15;line-height:100%;*filter:alpha(opacity=15);-webkit-transform-origin:50% 0;-webkit-transform:scale(.7);}
+.nav,.downNav{position:relative;width:526px;margin:0 0 0 80px;overflow:hidden;}
+.nav .but{width:255px;background-position:50% -385px;background-color:#3a3a3a;font-size:26px;}
+.nav .clk,.nav .eng{display:block;}
+.nav .bigbut,.nav .dlbut{line-height:90px;height:100px;}
+.nav .bigbut{background-color:#2fc3a3;margin:0 16px 0 0;}
+.nav .dlbut{background-color:#cfae69;}
+.dls{display:none;opacity:0;position:absolute;top:0;right:0;padding:10px 5px;width:245px;height:80px;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);background-color:#353535;overflow:hidden;z-index:6;}
+.dls .dlt{float:left;width:60px;height:100%;text-align:center;border-left:1px dashed #868686;}
+.dls .noleftborder{border-left:0;}
+.dls .dla{display:block;padding:50px 0 0;height:30px;font-weight:bold;color:#cdcac5;background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20150609ydy/icon.png);background-repeat:no-repeat;}
+.dls .dla:hover{color:#cfae69;background-color:#2c2c2c;}
+.dls .jsxz .dla{background-position:50% 13px;}
+.dls .qmxz .dla,.dls .zsxz .dla{background-position:50% -165px;}
+.dls .xfxz .dla{background-position:50% -345px;}
+.dls .xlxz .dla{background-position:50% -525px;}
+.dls .eng{display:none;}
+.feat{background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160419ydy/bg2-20160419.jpg) no-repeat 50% 0;}
+.feat .container{height:464px;}
+.feat h2 .eng{color:#dfe5e4;}
+.feat h2 .spc-color{color:#2fc3a3;}
+.reclist{width:100%;background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160626ydy/shendao.jpg) no-repeat 50% 0;overflow:hidden;}
+.reclist .rls{position:relative;float:left;text-align:center;width:200px;height:291px;overflow:hidden;}
+.reclist .rec-ico,.reclist .rec-ico img,.reclist .rec-btn{display:block;width:100%;height:100%;}
+.reclist .rec-ico{display:none;background:#000;overflow:hidden;}
+.reclist h3{width:100%;left:0;top:130px;color:#fff;font-size:22px;line-height:120%;font-weight:bold;z-index:2;}
+.reclist .view{left:50%;top:200px;width:80px;line-height:24px;margin:0 0 0 -40px;background:#3ed2b2;color:#fff;font-size:12px;border-radius:12px;z-index:2;}
+.reclist .bc{top:65px;left:50%;width:54px;height:54px;margin:0 0 0 -27px;z-index:2;}
+.reclist .infoem{display:none;width:100%;left:0;top:162px;color:#fff;font-size:16px;z-index:2;}
+.reclist .rec-btn{top:0;left:0;text-indent:-9999px;z-index:3;}
+.reclist .gbg{display:block;top:50%;left:50%;width:200%;height:0;border-radius:50%;padding:0 0 200%;margin:-100% 0 0 -100%;z-index:1;transform:scale(0);opacity:0;transition:all .3s ease-out 0s;background:#3ed2b2 url(http://ossweb-img.qq.com/images/wuxia/act/a20160419ydy/gmk.png) no-repeat 50% 50%;}
+.reclist .rls:hover .gbg{transform:scale(1);opacity:.9;}
+.reclist .rls:hover .view{background:#181818;}
+.reclist .ft2 .bc{background-position:-54px 0;}
+.reclist .ft3 .bc{background-position:-108px 0;}
+.reclist .ft4 .bc{background-position:-162px 0;}
+.reclist .ft5 .bc{background-position:-216px 0;}
+.reclist .ft1 .rec-btn{background-position:100px 0;}
+.reclist .ft2 .rec-btn{background-position:-235px 0;}
+.reclist .ft3 .rec-btn{background-position:-567px 0;}
+.sevunits{background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/bg-2.jpg) no-repeat 50% 0;}
+.sevunits .container{height:553px;}
+.sevunits h2{color:#fff;}
+.sevunits h2 .eng{color:#363839;}
+.sevunits h2 .spc-color{color:#cfae69;}
+.units{position:absolute;left:0;top:97px;width:100%;height:422px;overflow:hidden;}
+.units .unit{position:absolute;top:72px;background:#fff;width:63px;height:350px;z-index:2;-webkit-transition:all .1s ease-in 0s;transition:all .1s ease-in 0s;}
+.units .sdt{left:0;}
+.units .tbt{left:63px;}
+.units .swt{left:126px;}
+.units .tmt{left:189px;}
+.units .wdt{left:252px;}
+.units .txt{left:315px;}
+.units .zwt{left:378px;}
+.units .gbt{left:441px;}
+.cur-shendao .sdt,.cur-taibai .tbt,.cur-shenwei .swt,.cur-tangmen .tmt,.cur-wudu .wdt,.cur-tianxiang .txt,.cur-zhenwu .zwt,.cur-gaibang .gbt{opacity:0;z-index:0;filter:alpha(opacity=0);}
+.cur-shendao .tbt{left:559px;}
+.cur-shendao .swt,.cur-taibai .swt{left:622px;}
+.cur-shendao .tmt,.cur-taibai .tmt,.cur-shenwei .tmt{left:685px;}
+.cur-shendao .wdt,.cur-taibai .wdt,.cur-shenwei .wdt,.cur-tangmen .wdt{left:748px;}
+.cur-shendao .txt,.cur-taibai .txt,.cur-shenwei .txt,.cur-tangmen .txt,.cur-wudu .txt{left:811px;}
+.cur-shendao .zwt,.cur-taibai .zwt,.cur-shenwei .zwt,.cur-tangmen .zwt,.cur-wudu .zwt,.cur-tianxiang .zwt{left:874px;}
+.cur-shendao .gbt,.cur-taibai .gbt,.cur-shenwei .gbt,.cur-tangmen .gbt,.cur-wudu .gbt,.cur-tianxiang .gbt,.cur-zhenwu .gbt{left:937px;}
+.cur-shendao .unit-info{left:0;}
+.cur-taibai .unit-info{left:63px;}
+.cur-shenwei .unit-info{left:126px;}
+.cur-tangmen .unit-info{left:189px;}
+.cur-wudu .unit-info{left:252px;}
+.cur-tianxiang .unit-info{left:315px;}
+.cur-zhenwu .unit-info{left:378px;}
+.cur-gaibang .unit-info{left:441px;}
+.units .unita,.units .unita img{display:block;width:100%;height:100%;}
+.units .unita{position:relative;overflow:hidden;}
+.units .light{display:block;width:200%;height:100%;cursor:pointer;position:absolute;top:-100%;left:-100%;transform:skewX(-35deg);-o-transform:skewx(-35deg);-moz-transform:skewx(-35deg);-webkit-transform:skewx(-35deg);background-image:-moz-linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.2),rgba(255,255,255,0));background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.2),rgba(255,255,255,0));}
+.units .unita:hover .light{left:100%;top:100%;background-image:-moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.2),rgba(255,255,255,0));background-image:-webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.2),rgba(255,255,255,0));-webkit-transition:all 0.8s ease-in-out 0s;transition:all 0.8s ease-in-out 0s;}
+.unit-info{clear:both;position:absolute;top:72px;width:559px;height:350px;background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/bg-uts.jpg) no-repeat 0 0;z-index:1;-webkit-transition:left .1s ease-in 0s;transition:left .1s ease-in 0s;}
+.cotpart{clear:both;padding:30px 270px 0 50px;}
+.cotpart h3{position:relative;font-size:65px;color:#cfae69;font-weight:bold;line-height:130%;z-index:2;}
+.cotpart h3 .tag{display:block;top:15px;left:140px;width:38px;height:38px;}
+.cotpart .more{margin:20px 0 0;}
+.cotpart .morer{display:inline-block;background:#cfae69;font-size:13px;border-radius:15px;padding:0 15px;line-height:28px;}
+.cotpart .morer:hover{background:#c3a35f;}
+.mp-role{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition:all .36s ease-out 0s;transition:all .36s ease-out 0s;}
+.mp-role{position:absolute;right:0;bottom:0;height:422px;width:458px;background-repeat:no-repeat;background-position:100% bottom;z-index:1;}
+.mp-tw{position:relative;font-size:112%;color:#2fc3a2;z-index:2;}
+.mp-yw{position:relative;font-size:85.7%;color:#b7b7b7;z-index:2;}
+.mp-level{margin:15px 0 0;}
+.mp-level b{display:block;font-size:107.1%;margin:0 0 3px;color:#fff;font-weight:normal;}
+.mp-level i{display:inline-block;margin:0 8px 0 2px;width:10px;height:10px;font-size:0;line-height:0;border:1px solid #75797c;-webkit-transform:rotateZ(45deg);transform:rotateZ(45deg);}
+.mp-level .has{background-color:#ff8f17;border-color:#e2821a;}
+.taibai .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/taibai.png);}
+.taibai h3 .tag{background-position:-258px -27px;}
+.shenwei .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/shenwei.png);}
+.shenwei h3 .tag{background-position:-215px -27px;}
+.tangmen .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/tangmen.png);}
+.tangmen h3 .tag{background-position:-172px -27px;}
+.wudu .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/wudu.png);}
+.wudu h3 .tag{background-position:-129px -27px;}
+.zhenwu .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/zhenwu.png);}
+.zhenwu h3 .tag{background-position:-86px -27px;}
+.tianxiang .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/tianxiang.png);}
+.tianxiang h3 .tag{background-position:0 -27px;}
+.gaibang .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/gaibang.png);}
+.gaibang h3 .tag{background-position:-43px -27px;}
+.shendao .mp-role{background-image:url(http://ossweb-img.qq.com/images/wuxia/act/a20160701updata/shendao.png);}
+.shendao h3 .tag{background-position:-301px -27px;}
+.other{background:url(http://ossweb-img.qq.com/images/wuxia/act/a20150609ydy/p-3.jpg) no-repeat 50% 100%;}
+.other .container{height:600px;}
+.downNav{padding:40px 0 0;width:100%;margin-left:0;}
+.downNav .dnetbut,.downNav .dndlbut{width:495px;height:137px;line-height:137px;background-position:0 -278px;font-size:40px;text-indent:85px;}
+.downNav .dnetbut{background-color:#2fc3a3;margin:0 10px 0 0;}
+.downNav .dndlbut{background-color:#cfae69;}
+.downNav .pretag{width:70px;height:60px;top:50%;left:120px;margin:-30px 0 0;}
+.downNav .dnetbut .pretag{background-position:4px 0;}
+.downNav .dndlbut .pretag{background-position:-97px 0;}
+.downNav .smbut{width:240px;height:90px;line-height:90px;background-color:#2c2c2c;font-size:22px;margin:15px 0 0;}
+.downNav .dnguide{margin-right:15px;}
+.downNav .dnevent{margin-right:10px;}
+.downNav .dnbackground{margin-right:15px;}
+.downNav .dnsiteweb{margin-right:0;}
+.downNav .smbut .clk{color:#cdcdcd;}
+.visibleACT,.hidenACT{-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;}
+.visibleACT{-webkit-animation-name:visibleACT;animation-name:visibleACT;}
+.hidenACT{-webkit-animation-name:hidenACT;animation-name:hidenACT;}
+.nav .visibleACT{display:block;}
+.fds{position:fixed;_position:absolute;top:50%;right:30px;width:130px;margin-top:-183px;text-align:center;font-size:13px;font-weight:bold;z-index:100000;}
+.fds .ewmarea,.fds .ots,.fds .ota,.fds .ewmarea img,.fds .pictips,.fds .app-tit,.fds .app-ifo{display:block;margin:0 auto;}
+.fds .ewmarea{margin:0 0 5px;background:#fff;padding:4px;}
+.fds .ewmarea img{width:122px;height:122px;}
+.fds .pictips{background:#2fc3a3;padding:10px 0 8px;line-height:135%;color:#fff;}
+.fds .app-tit{font-size:14px;font-weight:bold;}
+.fds .app-ifo{font-size:12px;font-weight:normal;}
+.fds .ots{position:relative;width:100%;background-color:#2c2c2c;}
+.fds .ota{color:#fff;line-height:36px;}
+.fds .ota:hover{background-color:rgba(255,255,255,.05);}
+.fds .blk .ota{color:#c2c2c2;}
+.fds .bds{border-top:1px solid #414141;border-bottom:1px solid #414141;}
+.fds .ent,.fds .dlg{text-indent:30px;}
+.fds .ent{background-color:#2fc3a3;}
+.fds .dlg{background-color:#cfae69;}
+.fds .totop{display:block;width:45px;height:45px;margin:5px auto 0;background-position:0 -229px;text-align:left;text-indent:-9999px;}
+.fds .but{float:none;}
+.fds .pretag{width:24px;height:22px;top:50%;left:20px;margin:-11px 0 0;}
+.fds .ent .pretag{background-position:0 -83px;}
+.fds .dlg .pretag{background-position:-95px -83px;}
+.masklayer{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:.7;filter:alpha(opacity=70);z-index:998;}
+.layerdt{display:none;position:fixed;_position:absolute;top:50%;left:50%;width:790px;margin:-225px 0 0 -395px;z-index:9996;}
+.layerdt .lydt{position:relative;width:100%;height:450px;background-color:#000;}
+.layerdt video,.layerdt img,.layerdt object,.layerdt embed,.lydt div{display:block;position:absolute;top:0;left:0;width:100%;height:100%;}
+.layerdt object,.layerdt img{vertical-align:top;}
+.layerdt .more{display:block;width:100px;text-align:center;margin:10px auto 0;background:#2c2c2c;color:#fff;line-height:29px;font-size:12px;}
+.layerdt .more:hover{background:#1c1c1c;}
+.layerdt .more .plus{color:#ffa333;margin:0 0 0 5px;}
+.exitlayer{position:absolute;right:-60px;top:0;width:60px;height:60px;line-height:56px;font-size:40px;color:#fff;overflow:hidden;text-align:center;background:#2fc3a2;text-indent:-9999px;text-indent:0\0;*text-indent:0;}
+.exitlayer:hover{opacity:0.95;}
+.exitlayer:before,.exitlayer:after{position:absolute;left:50%;top:50%;margin:0 0 0 -40%;content:"";line-height:0;font-size:0;width:80%;height:1px;background:#fff;overflow:hidden;display:none\0;}
+.exitlayer:before{-webkit-transform:rotateZ(45deg);transform:rotateZ(45deg);}
+.exitlayer:after{-webkit-transform:rotateZ(-45deg);transform:rotateZ(-45deg);}
+.eventlayer{display:none;position:absolute;top:50%;left:10%;background:#fff;width:786px;z-index:9996;}
+.eventlayer .tabs{position:relative;background:#101010;height:53px;z-index:5;}
+.eventlayer .taba{position:relative;display:block;float:left;line-height:53px;text-align:center;width:262px;font-weight:bold;color:#a0a0a0;font-size:16px;}
+.eventlayer .cur.taba{background:#2fc3a3;color:#fff;}
+.eventlayer .cur.taba:after{position:absolute;content:"";bottom:-8px;left:50%;margin:0 0 0 -8px;width:0;height:0;border-top:8px solid #2fc3a3;border-left:8px solid transparent;border-right:8px solid transparent;}
+.eventlayer .tabc{position:relative;clear:both;width:100%;height:399px;z-index:1;}
+.eventlayer .tabt,.eventlayer .tabt img{width:100%;height:100%;}
+.eventlayer .tabt{display:none;position:absolute;top:0;left:0;}
+.eventlayer .tabt .linkbtn{display:block;position:absolute;top:0;left:0;width:196px;height:100%;text-indent:-9999px;}
+.eventlayer .tabt .linkbtn-2{left:196px;}
+.eventlayer .tabt .linkbtn-3{left:392px;}
+.eventlayer .tabt .linkbtn-4{left:588px;}
+.eventlayer .spctabt{background:url(http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/ly-3.jpg) no-repeat 50% 50%;}
+.eventlayer .todlgame{display:block;text-align:center;font-size:30px;height:91px;background-position:0 100%;font-weight:bold;line-height:220%;overflow:hidden;}
+.eventlayer .todlgame .stips{display:block;font-size:16px;color:#2b1c1c;line-height:100%;margin:-10px 0 0;cursor:pointer;}
+.svslist{padding:50px 0 0 90px;overflow:hidden;}
+.svslist .svs{position:relative;float:left;margin:40px 40px 0 0;width:174px;height:74px;background-position:0 -28px;text-align:center;}
+.svslist .are{display:block;font-size:22px;color:#fff;font-weight:bold;line-height:60px;height:100%;overflow:hidden;}
+.svslist .svn{display:block;line-height:100%;margin:-15px 0 0 ;font-weight:normal;color:#101010;font-size:13px;}
+.svslist .tag{display:block;width:26px;height:28px;top:-10px;left:-8px;text-indent:-9999px;}
+.svslist .new{background-position:0 0;}
+.svslist .hot{background-position:-148px 0;}
+.svslist .wait{width:52px;height:52px;background-position:-179px 0;top:-1px;left:-1px;}
+/* for layer  */
+.new_event_info{display:none;position:absolute;width:880px;height:440px;left:0px;top:0px;}
+.new_event_info .new_event_info_con,.new_event_info .new_event_info_con img,.new_event_info .new_event_info_btn{width:100%;height:100%;}
+.new_event_info .new_event_info_con{position:relative;}
+.new_event_info .new_event_info_con img,.new_event_info .new_event_info_btn{display:block;}
+.new_event_info .new_event_info_btn{position:absolute;top:0;left:0;text-indent:-9999px;background:#fff;opacity:0;filter:alpha(opacity=0);}
+.new_event_info .new_event_info_btn:hover{opacity:.1;filter:alpha(opacity=10);}
+.new_event_info .new_event_info_close{display:block;width:39px;height:39px;background:url(http://ossweb-img.qq.com/images/wuxia/act/a20150609ydy/close.png) no-repeat 0px 0px;position:absolute;top:0;right:-45px;}
+</style>
+<!--[if lte IE 9]>
+<style>
+.nav .visibleACT{display:block;opacity:1;}
+.reclist .gbg{display:none;}
+.reclist .rls:hover .gbg{display:block;}
+.reclist .rec-btn{background:#fff;filter:alpha(opacity=0);}
+</style>
+<![endif]-->
+<!--[if lte IE 8]>
+<style>
+.nav .bigbut .eng{color:#2ab295;}
+.nav .dlbut .eng{color:#bd9f60;}
+.otherlists .other-lk:hover{border-bottom:0;filter:alpha(opacity=10);}
+</style>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper" id="wrap">
+	<div class="head">
+		<strong class="pa logo spr-h">天涯明月刀</strong>
+		<div class="container">
+			<div class="header">
+				<h1 class="hid">天涯明月刀 神刀再起</h1><p class="hid">七月一日公测</p>
+				<a class="slogan" href="http://wuxia.qq.com/act/a20160616shendao/index.htm" target="_blank" onclick="pgvSendClick({hottag:'ydyv.vs1.head.slogan'});">点击查看版本信息</a>
+			</div>
+			<div class="content">
+				<a class="view" href="javascript:demandVideo.showVideo(0);" onclick="pgvSendClick({hottag:'ydyv.vs1.head.gifvideo'});"><img src="http://ossweb-img.qq.com/images/wuxia/act/a20160626ydy/vd.png" alt="最新版本视频"><span class="info">最新版本视频</span></a>
+				<div class="nav">
+					<span class="but spr-h bigbut"><a class="clk" href="http://wuxia.qq.com/main.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.head.enter'});" target="_blank">进入官网<i class="eng">ENTER SITE</i></a></span>
+					<span class="but spr-h dlbut" id="dlbut"><a class="clk" href="javascript:openMiniLoad(1);" onclick="pgvSendClick({hottag:'ydyv.vs1.head.yxxz'});">下载客户端<i class="eng">DOWNLOAD</i></a><sup class="spr-h tag">极速下载</sup></span>
+				</div>
+				<div class="eventsbox">
+					<div class="haslybox boxes"><a href="javascript:openMiniLoad(0);" onclick="pgvSendClick({hottag:'ydyv.vs1.head.eventlayer'});"><img alt="新手礼包" src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/1.jpg"></a></div>
+					<div class="haslybox boxes"><a href="http://wuxia.qq.com/cp/a20160616obt/index.html" onclick="pgvSendClick({hottag:'ydyv.vs1.head.evspc'});" target="_blank"><img alt="重点活动" src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/2.jpg"></a></div>
+					<div class="bnsbox boxes"><div class="rotate_content" id="rotate_content"><ul class="rotate" id="rotate" style="width: 1248px; left: -312px;"><li style="width:312px;" class=""><a href="http://wuxia.qq.com/cp/a20160728qxhd/index.htm?atm_cl=ad&amp;atm_pos=13983&amp;e_code=259073" target="_blank"><img src="http://ossweb-img.qq.com/upload/adw/image/201608/1470599453014813443.jpg" alt="七夕活动来袭"></a></li><li style="width:312px;" class="cur"><a href="http://wuxia.qq.com/cp/a20160722trsq/index.shtml?atm_cl=ad&amp;atm_pos=13984&amp;e_code=259142" target="_blank"><img src="http://ossweb-img.qq.com/upload/adw/image/201608/1470617145462292763.jpg" alt="同人社区打赏开启"></a></li><li style="width:312px;" class=""><a href="http://wuxia.qq.com/cp/a20160621orange/index.html?atm_cl=ad&amp;atm_pos=13985&amp;e_code=258234" target="_blank"><img src="http://ossweb-img.qq.com/upload/adw/image/201607/1469774206031828055.jpg" alt="TGP助力江湖"></a></li><li style="width:312px;" class=""><a href="http://wuxia.qq.com/cp/a20160721tdhy/index.htm?atm_cl=ad&amp;atm_pos=13986&amp;e_code=258236" target="_blank"><img src="http://ossweb-img.qq.com/upload/adw/image/201608/1470095858683776266.jpg" alt="会员助力天刀"></a></li></ul></div><div class="rotate_number"><div class="numbox handheld" id="indrt"><span class="" data-id="0"><strong>1</strong><a class="rotate_name" href="http://wuxia.qq.com/cp/a20160728qxhd/index.htm?atm_cl=ad&amp;atm_pos=13983&amp;e_code=259073"><b>七夕活动来袭</b></a></span><span class="cur" data-id="1"><strong>2</strong><a class="rotate_name" href="http://wuxia.qq.com/cp/a20160722trsq/index.shtml?atm_cl=ad&amp;atm_pos=13984&amp;e_code=259142"><b>同人社区打赏开启</b></a></span><span class="" data-id="2"><strong>3</strong><a class="rotate_name" href="http://wuxia.qq.com/cp/a20160621orange/index.html?atm_cl=ad&amp;atm_pos=13985&amp;e_code=258234"><b>TGP助力江湖</b></a></span><span class="" data-id="3"><strong>4</strong><a class="rotate_name" href="http://wuxia.qq.com/cp/a20160721tdhy/index.htm?atm_cl=ad&amp;atm_pos=13986&amp;e_code=258236"><b>会员助力天刀</b></a></span></div></div></div>
+				</div>
+				<ul class="otherlists">
+					<li class="ols f">
+						<p class="other-ct"><strong class="other-tit">新手指南</strong><em class="other-info">玩转天涯不用愁</em><i class="sc pa spr-h"></i><i class="bc pa spr-h"></i></p>
+						<a class="other-lk" href="http://wuxia.qq.com/guide/" onclick="pgvSendClick({hottag:'ydyv.vs1.head.guide'});" target="_blank">前往查看</a>
+					</li>
+					<li class="ols s">
+						<p class="other-ct"><strong class="other-tit">游戏特色</strong><em class="other-info">天涯明月真江湖</em><i class="sc pa spr-h"></i><i class="bc pa spr-h"></i></p>
+						<a class="other-lk" href="http://wuxia.qq.com/gamedata/features/" onclick="pgvSendClick({hottag:'ydyv.vs1.head.features'});" target="_blank">前往查看</a>
+					</li>
+					<li class="ols t">
+						<p class="other-ct"><strong class="other-tit">活动中心</strong><em class="other-info">礼包福利一网打尽</em><i class="sc pa spr-h"></i><i class="bc pa spr-h"></i></p>
+						<a class="other-lk" href="http://wuxia.qq.com/events.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.head.events'});" target="_blank">前往查看</a>
+					</li>
+					<li class="ols u">
+						<p class="other-ct"><strong class="other-tit">设定站</strong><em class="other-info">你不知道的天刀</em><i class="sc pa spr-h"></i><i class="bc pa spr-h"></i></p>
+						<a class="other-lk" href="http://wuxia.qq.com/act/a20141219sdmh/" onclick="pgvSendClick({hottag:'ydyv.vs1.head.a20141219sdmh'});" target="_blank">前往查看</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="part feat">
+		<div class="container">
+			<h2><i class="eng">RECOMMENDED</i>全新内容 <span class="spc-color">精彩呈现</span></h2>
+            <ul class="reclist">
+                <li class="rls ft1">
+                    <!--<span class="rec-ico"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160527ydy/pic-1.jpg" alt="平衡性调整"></span>-->
+                    <span class="gbg pa"></span><i class="bc pa spr-1"></i><h3 class="pa">全新门派<br>神刀开放</h3><!--<em class="infoem pa">时光荏苒 感谢有你！</em>--><span class="view pa">查看详情</span>
+                    <a class="pa rec-btn" href="http://wuxia.qq.com/act/a20160616shendao/index.htm#Item1" onclick="pgvSendClick({hottag:'ydyv.vs1.feat160626.ft1'});" target="_blank">查看详情</a>
+                </li>
+                <li class="rls ft2">
+                    <span class="gbg pa"></span><i class="bc pa spr-1"></i><h3 class="pa">全新玩法<br>高阶体验</h3><span class="view pa">查看详情</span>
+                    <a class="pa rec-btn" href="http://wuxia.qq.com/act/a20160616shendao/index.htm#Item2" onclick="pgvSendClick({hottag:'ydyv.vs1.feat160626.ft2'});" target="_blank">查看详情</a>
+                </li>
+                <li class="rls ft3">
+                    <span class="gbg pa"></span><i class="bc pa spr-1"></i><h3 class="pa">巴蜀剧情<br>一触即发</h3><span class="view pa">查看详情</span>
+                    <a class="pa rec-btn" href="http://wuxia.qq.com/act/a20160616shendao/index.htm#Item4" onclick="pgvSendClick({hottag:'ydyv.vs1.feat160626.ft3'});" target="_blank">查看详情</a>
+                </li>
+                <li class="rls ft4">
+                    <span class="gbg pa"></span><i class="bc pa spr-1"></i><h3 class="pa">等级突破<br>成长加速</h3><span class="view pa">查看详情</span>
+                    <a class="pa rec-btn" href="http://wuxia.qq.com/act/a20160616shendao/index.htm#Item3" onclick="pgvSendClick({hottag:'ydyv.vs1.feat160626.ft4'});" target="_blank">查看详情</a>
+                </li>
+                <li class="rls ft5">
+                    <span class="gbg pa"></span><i class="bc pa spr-1"></i><h3 class="pa">全新大区<br>天命风流</h3><span class="view pa">查看详情</span>
+                    <a class="pa rec-btn" href="http://wuxia.qq.com/act/a20160616shendao/index.htm#Item5" onclick="pgvSendClick({hottag:'ydyv.vs1.feat160626.ft5'});" target="_blank">查看详情</a>
+                </li>
+            </ul>
+		</div>
+	</div>
+	<div class="part sevunits">
+		<div class="container">
+			<h2><i class="eng">RECOMMENDED</i>八荒门派 <span class="spc-color">各有主张</span></h2>
+			<ul class="units cur-shendao" id="units">
+				<li class="unit sdt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/shendao.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.shendao'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160701updata/uts-8.jpg" alt="神刀"><i class="light"></i></a></li>
+				<li class="unit tbt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/taibai.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.taibai'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-1.jpg" alt="太白"><i class="light"></i></a></li>
+				<li class="unit swt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/shenwei.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.shenwei'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-2.jpg" alt="神威"><i class="light"></i></a></li>
+				<li class="unit tmt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/tangmen.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.tangmen'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-3.jpg" alt="唐门"><i class="light"></i></a></li>
+				<li class="unit gbt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/gaibang.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.gaibang'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-7.jpg" alt="丐帮"><i class="light"></i></a></li>
+				<li class="unit txt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/tianxiang.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.tianxiang'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-5.jpg" alt="天香"><i class="light"></i></a></li>
+				<li class="unit zwt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/zhenwu.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.zhenwu'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-6.jpg" alt="真武"><i class="light"></i></a></li>
+				<li class="unit wdt"><a class="unita" href="http://wuxia.qq.com/gamedata/league/wudu.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.units.wudu'});" target="_blank"><img data-src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/uts-4.jpg" alt="五毒"><i class="light"></i></a></li>
+			<li class="unit-info shendao" id=""><div class="cotpart"><h3>神刀<em class="pa spr-2 tag"></em></h3><p class="mp-tw">刀含杀气腾幽朔，萧飒寒芒泣鬼神</p><p class="mp-yw">长刀掠世，雄鹰相随，勇者初心无惧，仁者自可无敌。神刀乃傅红雪叶开所在之门派，江湖中第一用刀之门派，亦是八荒中最为特立独行、潇洒率性之门派...</p><p class="mp-level"><b>操作难度</b><i class="has"></i><i class="has"></i><i class="has"></i><i class="has"></i><i class="nos"></i></p><p class="more"><a class="morer" href="http://wuxia.qq.com/gamedata/league/shendao.shtml" target="_blank">查看更多<i>+</i></a></p><div class="mp-role"></div></div></li></ul>
+		</div>
+	</div>
+	<div class="part other">
+		<div class="container">
+			<div class="downNav">
+				<span class="but spr-c dnetbut"><a class="clk" href="http://wuxia.qq.com/main.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnenter'});" target="_blank">进入官网</a><sup class="spr-c pretag"></sup></span>
+				<span class="but spr-c dndlbut"><a class="clk" href="javascript:openMiniLoad(1);" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnyxxz'});" target="_blank">游戏下载</a><sup class="spr-c pretag"></sup></span>
+				<span class="but smbut dnguide"><a class="clk" href="http://wuxia.qq.com/guide/" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnguide'});" target="_blank">新手指南</a></span>
+				<span class="but smbut dnevent"><a class="clk" href="http://wuxia.qq.com/events.shtml" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnevent'});" target="_blank">活动中心</a></span>
+				<span class="but smbut dnbackground"><a class="clk" href="http://wuxia.qq.com/gamedata/" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnbackground'});" target="_blank">世界背景</a></span>
+				<span class="but smbut dnsiteweb"><a class="clk" href="http://wuxia.qq.com/kz/" onclick="pgvSendClick({hottag:'ydyv.vs1.other.dnkz'});" target="_blank">逍遥客栈</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="masklayer" id="mask"></div>
+<div class="layerdt" id="layerdt"><div id="lydt" class="lydt"></div><a class="more" id="more" href="" onclick="pgvSendClick({hottag:'ydyv.vs1.layerdt.more'});" target="_blank">了解更多<i class="plus">+</i></a><a href="javascript:demandVideo.closeVideo();" class="exitlayer">×</a></div>
+<div class="eventlayer" id="eventlayer">
+	<div class="tabs"><a class="taba" href="javascript:;">888元新手礼</a><a class="taba" href="javascript:;">特色玩法成长助力</a><a class="taba" href="javascript:;">推荐服务器</a></div>
+	<div class="tabc">
+		<div class="tabt"><a><img src="http://ossweb-img.qq.com/images/wuxia/act/a20160107ydy/ly-1.jpg"></a></div>
+		<div class="tabt">
+			<a><img src="http://ossweb-img.qq.com/images/wuxia/act/a20160706ydy/news20160706.jpg"></a>
+			<a class="linkbtn linkbtn-1" href="http://wuxia.qq.com/cp/a20160229czjs/" target="_blank">快速升级</a>
+			<a class="linkbtn linkbtn-2" href="http://wuxia.qq.com/act/a20160616shendao/index.htm" target="_blank">版本专题</a>
+			<a class="linkbtn linkbtn-3" href="http://wuxia.qq.com/act/a20160423station/camp.shtml" target="_blank">设定专题</a>
+			<a class="linkbtn linkbtn-4" href="http://wuxia.qq.com/events.shtml" target="_blank">活动升级</a>
+		</div>
+		<div class="tabt spctabt">
+			<ul class="svslist">
+				<li class="svs spr-ly"><a class="are">锦鲤抄<em class="svn">天命风流</em></a><i class="pa tag spr-ly new">新</i></li>
+				<li class="svs spr-ly"><a class="are">千秋月<em class="svn">天命风流</em></a><i class="pa tag spr-ly new">新</i></li>
+				<li class="svs spr-ly"><a class="are">枯叶蝶<em class="svn">天命风流</em></a><i class="pa tag spr-ly new">新</i></li>
+				<li class="svs spr-ly"><a class="are">如梦令<em class="svn">天命风流</em></a><i class="pa tag spr-ly new">新</i></li>
+			</ul>
+		</div>
+	</div>
+	<a class="todlgame spr-ly" href="http://down.qq.com/wuxia/dltools/2.0.1.22_1/WuXiaSetup_V2.0.1.22_Full_TDL_speeded_signed.exe" onclick="pgvSendClick({hottag:'ydyv.vs1.layerdt.dlgame'});">无需注册 极速下载<em class="stips">QQ账号直接登录</em></a>
+	<a href="javascript:showDialog.hide();" class="exitlayer">×</a>
+</div>
+<script src="http://x.xf.qq.com/js/xf/xflib2.0.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/foot.js"></script><div id="footer_ied"><div class="wrap_ied"><p><a href="http://ieg.tencent.com" target="_blank">腾讯互动娱乐</a> | <a href="http://game.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://adver.qq.com/" target="_blank">广告服务</a> | <a href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a> | <a href="http://service.qq.com/" target="_blank">腾讯游戏客服</a> | <a href="http://game.qq.com/gnav" target="_blank">游戏地图</a> | <a href="http://tgact.qq.com/" target="_blank">游戏活动</a> | <a href="http://game.qq.com/brand/business.htm" target="_blank">商务合作</a> | <a href="http://www.qq.com/map/" target="_blank">网站导航</a></p><p class="e">COPYRIGHT © 1998 – 2016 TENCENT. ALL RIGHTS RESERVED.</p><p><a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">腾讯公司 版权所有</a></p></div></div><script src="http://ossweb-img.qq.com/images/js/dr/dr.js" type="text/javascript"></script>
+<script>
+var glb={
+	g:1,
+	d:document,nau:navigator.userAgent,
+	getId:function(id){return this.d.getElementById(id)},
+	newElem:function(o){return this.d.createElement(o);},
+	getElems:function(el,o){return el.getElementsByTagName(o);},
+	getClass:function(cn,el,nd){var testClass=new RegExp("\\b"+cn+"\\b"),ar=[],el=el||this.d,nd=nd||'*',tag=this.getElems(el,nd),len=tag.length;for(var i=0;i<len;i++){var cel=tag[i];if(testClass.test(cel.className)){ar.push(cel);};};return ar;},
+	st:function(){return (this.d.body.scrollTop)?this.d.body.scrollTop:this.d.documentElement.scrollTop;},
+	sl:function(){return (this.d.body.scrollLeft)?this.d.body.scrollLeft:this.d.documentElement.scrollLeft;},
+	ww:function(){return (this.d.documentElement&&this.d.documentElement.clientWidth)?this.d.documentElement.clientWidth:this.d.body.offsetWidth;},
+	wh:function(){return (this.d.documentElement&&this.d.documentElement.clientHeight)?this.d.documentElement.clientHeight:this.d.body.offsetHeight;},
+	offsetT:function(o){var y=o.offsetTop;if(o.style.position=='absolute')return y;while(o=o.offsetParent){y+=o.offsetTop;}return y;},
+	offsetL:function(o){var y=o.offsetLeft;if(o.style.position=='absolute')return y;while(o=o.offsetParent){y+=o.offsetLeft;}return y;},
+	addEvent:function(a,b,c,d){if(a.addEventListener){a.addEventListener(b,c,d)}else if(a.attachEvent){a.attachEvent('on'+b,c)}},
+	delEvent:function (a,b,c,d){if(a.removeEventListener){a.removeEventListener(b,c,d)}else if(a.detachEvent){a.detachEvent('on'+b,c)}},
+	delayLoad:function(url,callback){var script=this.newElem('script');if(script.readyState){script.onreadystatechange=function(){if(script.readyState=="loaded"||script.readyState=="complete"){script.onreadystatechange=null;if(callback){callback();};};};}else{script.onload=function(){if(callback){callback();};};};script.src=url;this.d.body.appendChild(script);}
+};
+glb.brow={
+	isLowBrow:!-[1,],
+	isIE:/MSIE/i.test(glb.nau),
+	isIE9:/MSIE 9/i.test(glb.nau),
+	isIE6:/MSIE 6/i.test(glb.nau),
+	isLowIE:/MSIE 6|MSIE 7/i.test(glb.nau),
+	isAndr:/Android/i.test(glb.nau),
+	isApple:/iPhone|iTouch|iPad/i.test(glb.nau),
+	isBlackBerry:/BlackBerry/i.test(glb.nau),
+	isWindowsPhone:/IEMobile/i.test(glb.nau),
+	isMobile:/Android|iPhone|iTouch|iPad|BlackBerry|IEMobile|Mobile/i.test(glb.nau)
+};
+glb.delayLoadPic=function(area){
+	var a={
+		pics:null,len:null,picarray:[]
+	};
+	a.pics=glb.getElems(area,'img');
+	a.len=a.pics.length;
+	for(var i=0;i<a.len;i++){a.picarray[i]=a.pics[i];};
+	a.looPic=function(){
+		var reheight=glb.wh(),residue=a.picarray.length,top=null,op=null,ut=null;
+		if(residue!=0){
+			top=glb.d.documentElement.scrollTop||glb.d.body.scrollTop;
+			for(var j=residue;j--;){
+				op=a.picarray[j];
+				if(op.getAttribute("data-src")){
+					ut=glb.offsetT(op)-top;
+					if(ut<reheight){
+						op.src=op.getAttribute("data-src");
+						op.removeAttribute('data-src');
+						a.picarray.splice(j,1);
+					};
+				};
+			};
+		}else{
+			glb.delEvent(window,"scroll",a.looPic,false);
+			glb.delEvent(window,"resize",a.looPic,false);
+		};
+	};
+	a.looPic();
+	glb.addEvent(window,"scroll",a.looPic,false);
+	glb.addEvent(window,"resize",a.looPic,false);
+};
+var MoreEquipmentVideo=function(o){
+	this.init=1;
+	this.setCotType=function(){return (glb.brow.isMobile)?'touchstart':'click';};
+	this.equipmentType=function(){return (!(glb.newElem('video').canPlayType))&&!glb.brow.isMobile;};
+	this.ustype=this.setCotType();
+	this.curEquipment=this.equipmentType();
+	this.isWhich=function(){return (glb.brow.isMobile)?1:0;};
+	this.tag=null;
+	this.str={left:'<a class="clk_to_play" id="clk_to_play" href="javascript:;" title="点击播放">',right:'</a>'};
+	this.index=0;
+	this.auto=false;
+	this.device=(glb.brow.isMobile)?'11001':'1';
+	this.fmt=(glb.brow.isMobile)?'auto':'fhd';
+	this.rnd=new Date().valueOf();
+	if(o){
+		this.tag=(o.tag)?glb.getId(o.tag):this.tag;
+		this.index=(o.hasOwnProperty('index'))?o.index:self.index;
+		this.vidQuery=o.vidQuery||null;
+		this.vid=(o.vid)?o.vid:(this.vidQuery)?this.vidQuery[this.index]:null;
+		this.cover=o.cover||null;
+		this.auto=o.auto||this.auto;
+		this.initPageVideo();
+	};
+};
+MoreEquipmentVideo.prototype.reAppVideo=function(o){
+	var self=this;
+	self.init=0;
+	self.tag=(o.tag)?glb.getId(o.tag):self.tag;
+	self.index=(o.hasOwnProperty('index'))?o.index:self.index;
+	self.auto=o.auto||self.auto;
+	self.vid=o.vid||self.vidQuery[self.index];
+	if(!self.auto){self.cover=o.cover||self.cover[self.index];};
+	self.initPageVideo();
+};
+MoreEquipmentVideo.prototype.outVideo=function(obj){
+	var self=obj,data=window['QZOutputJson'],
+		_ipurl=data.vl.vi[0].ul.ui[0].url,
+		_name=data.vl.vi[0].fn,
+		_vkey=data.vl.vi[0].fvkey,
+		_br=data.vl.vi[0].br,
+		_platform=2,
+		_fmt='auto',
+		_level=0,
+		_sdtfrom='v3010',
+		_ar=[],_url=null,_s=null,_isauto=null;
+	if('1'==self.device){
+		_ar=data.vl.vi[0].fn.split('.');
+		if(data.vl.vi[0].cl.ci&&data.vl.vi[0].cl.ci[0].idx){_ar.splice(_ar.length-1,0,data.vl.vi[0].cl.ci[0].idx);};
+		_name=_ar.join('.');
+	};
+	_url=_ipurl+_name+'?vkey='+_vkey+'&br='+_br+'&platform='+_platform+'&fmt='+_fmt+'&level='+_level+'&sdtfrom='+_sdtfrom;
+	_isauto=(self.auto)?' autoplay="autoplay"':' style="width:1px;height:1px;"';
+	self.str.v='<video id="curVideoPlay" src="'+_url+'"'+_isauto+' controls="controls"></video>';
+	if(self.tag){
+		if(self.auto){
+			self.tag.innerHTML=self.str.v;
+		}else{
+			self.tag.innerHTML=self.str.v+self.str.left+self.str.img+self.str.right;
+			self.clkPlayVideo();
+		};
+	};
+	self.video=glb.getId('curVideoPlay');
+};
+MoreEquipmentVideo.prototype.outFlashPlay=function(){
+	var self=this;
+	self.tag.innerHTML='<object width="100%" height="100%" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab#version=10,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="video_i0020a8qa0g"><param value="'+self.url+'" name="movie"><param value="opaque" name="wmode"><param value="always" name="allowscriptaccess"><param value="high" name="quality"><param value="true" name="allowfullscreen"><param value="all" name="allownetworking"><embed width="100%" height="100%" align="middle" wmode="opaque" src="'+self.url+'" quality="high" name="_playerswf" id="_playerswf" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></object>';
+};
+MoreEquipmentVideo.prototype.clkPlayVideo=function(){
+	var self=this,playVideo=function(e){
+		var e=e||window.event,target=e.target||e.srcElement;
+		if('IMG'==target.nodeName&&'clk_to_play'==target.parentNode.className){
+			if((!(glb.newElem('video').canPlayType))&&!glb.brow.isMobile){
+				self.outFlashPlay();
+			}else{
+				self.video.style.cssText='width:100%;height:100%;';
+				self.video.play();
+			};
+			self.tag.removeChild(target.parentNode);
+			glb.delEvent(self.tag,self.ustype,playVideo,false);
+		};
+	};
+	glb.addEvent(self.tag,self.ustype,playVideo,false);
+};
+MoreEquipmentVideo.prototype.initPageVideo=function(){
+	var self=this;
+	self.str.img=(self.cover)?'<img src="'+(self.cover[self.index])+'" />':'';
+	if(self.curEquipment){
+		self.url='http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?autoplay=1&amp;outhost=http://wuxia.qq.com/&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;vid='+self.vid;
+		if(self.auto){self.outFlashPlay();return;};
+		if(self.tag){
+			self.tag.innerHTML=self.str.left+self.str.img+self.str.right;
+			self.clkPlayVideo();
+		};
+	}else{
+		if(self.vid){
+			self.url='http://vv.video.qq.com/getinfo?vids='+self.vid+'&platform='+self.device+'&charge=0&otype=json&defaultfmt='+self.fmt+'&sb=0&nocache=0&_rnd='+self.rnd;
+			glb.delayLoad(self.url,function(){self.outVideo(self);});
+		};
+	};
+};
+
+var Main=function(){
+	var self=this;
+	this.setCotType=function(){return (glb.brow.isMobile)?'touchstart':'click';};
+	this.ebody=glb.d.body;
+	this.eq=this.setCotType();
+	this.rotateEvent();
+};
+Main.prototype.rotateEvent=function(){
+	var a={
+		box:glb.getId('rotate_content'),rotate:glb.getId('rotate'),cate:glb.getId('cate'),indrt:glb.getId('indrt'),li:null,span:null,width:null,target:null,flag:null,bk:null,
+		rotID:'14888',picurl:'http://ossweb-img.qq.com/upload/adw/',allrot:null,len:7,index:0,n:0,cachewidth:null
+	},domChage=function(){
+		if(a.curli&&a.curspan){a.curli.className=a.curspan.className='';};
+		a.curli=a.li[a.n];
+		a.curspan=a.span[a.n];
+		a.curli.className=a.curspan.className='cur';
+		a.rotate.style.left=-(a.width*a.n)+'px';
+	},pcControl=function(e){
+		clearInterval(a.flag);
+		var e=e||window.event;
+		a.target=e.target||e.srcElement;
+		if('SPAN'==a.target.nodeName&&''==a.target.className){
+			a.n=a.target.getAttribute('data-id');
+			domChage();
+		};
+	},hdControl=function(){
+		var b={point:null,initmX:null,initmY:null,mX:null,mY:null,initleft:null,mX:null,mY:null};
+		glb.addEvent(a.rotate,'touchstart',function(e){
+			clearInterval(a.flag);
+			b.point=e.touches[0];
+			b.mX=0;b.mY=0;
+			b.initmX=b.point.clientX;
+			b.initmY=b.point.clientY;
+			b.initleft=a.rotate.offsetLeft;
+		});
+		glb.addEvent(a.rotate,'touchmove',function(e){
+			clearInterval(a.flag);
+			e.preventDefault();
+			b.point=e.touches[0];
+			b.mX=b.point.pageX;
+			if(!((a.n==0&&b.mX-b.initmX>0)||(a.n==(a.index-1)&&b.mX-b.initmX<0))){
+				a.rotate.style.webkitTransition=a.rotate.style.mozTransition=a.rotate.style.oTransition=a.rotate.style.msTransition=a.rotate.style.transition='none';
+				a.rotate.style.left=b.initleft+(b.mX-b.initmX)+'px';
+			};
+		});
+		glb.addEvent(a.rotate,'touchend',function(e){
+			a.rotate.style.webkitTransition=a.rotate.style.mozTransition=a.rotate.style.oTransition=a.rotate.style.msTransition=a.rotate.style.transition='left .2s ease 0s';
+			if(b.mX!=0&&(b.mX-b.initmX)>0){ //右滑
+				a.n=(a.n>0&&b.mX-b.initmX>80)?--a.n:a.n;
+			}else if(b.mX!=0&&(b.mX-b.initmX)<0){ //左滑
+				a.n=(a.n<(a.index-1)&&b.mX-b.initmX<-80)?++a.n:a.n;
+			};
+			domChage();
+			autoRotate();
+		});
+	},autoRotate=function(){
+		a.flag=setInterval(function(){
+			a.n=(a.n<(a.index-1))?++a.n:0;
+			domChage();
+		},5000);
+	},reSetRotate=function(){
+		clearInterval(a.flag);a.n=0;
+		a.cachewidth=a.width=a.box.clientWidth;
+		if(!a['picAR'+a.rotID]){
+			a.index=0;
+			a.allrot=window['oDaTaNew'+a.rotID];
+			a['picAR'+a.rotID]=[];a['indAR'+a.rotID]=[];
+			for(var datas in a.allrot){
+				a['picAR'+a.rotID].push('<li style="width:'+a.width+'px;" class="'+((0==a.index)?'cur':'')+'"><a href="'+a.allrot[datas][1]+'" target="_blank"><img src="'+(a.picurl+a.allrot[datas][2])+'" alt="'+decodeURIComponent(a.allrot[datas][0])+'"></a></li>');
+				a['indAR'+a.rotID].push('<span class="'+((0==a.index)?'cur':'')+'" data-id="'+a.index+'"><strong>'+(++a.index)+'</strong><a class="rotate_name" href="'+a.allrot[datas][1]+'"><b>'+decodeURIComponent(a.allrot[datas][0])+'</b></a></span>');
+			};
+		}else{
+			a.index=a['picAR'+a.rotID].length;
+		};
+		a.rotate.style.width=(a.width*a.index)+'px';
+		a.rotate.innerHTML=a['picAR'+a.rotID].join('');
+		a.li=glb.getElems(a.rotate,'li');
+		if(a['indAR'+a.rotID].length>1){
+			a.indrt.innerHTML=a['indAR'+a.rotID].join('');
+			a.span=glb.getElems(a.indrt,'span');
+			domChage();autoRotate();
+		};
+	},writeRTs=function(){
+		reSetRotate();
+		if(!glb.brow.isMobile){
+			glb.addEvent(a.indrt,'mouseover',pcControl,false);
+			glb.addEvent(a.indrt,'mouseout',autoRotate,false);
+		}else{
+			a.indrt.className+=' handheld';hdControl();
+		};
+		glb.addEvent(window,'resize',function(){
+			clearInterval(a.flag);
+			clearTimeout(a.bk);
+			a.width=a.box.clientWidth;
+			a.rotate.style.webkitTransition=a.rotate.style.mozTransition=a.rotate.style.oTransition=a.rotate.style.msTransition=a.rotate.style.transition='none';
+			if(a.cachewidth!=a.width){
+				var w=(a.width>a.cachewidth)?a.rotate.offsetLeft-(Math.abs(a.width-a.cachewidth)*a.n):a.rotate.offsetLeft+(Math.abs(a.width-a.cachewidth)*a.n);
+				a.rotate.style.left=w+'px';
+				a.cachewidth=a.width;
+				a.rotate.style.width=(a.width*a.index)+'px';
+				for(var i=0;i<a.index;i++){a.li[i].style.width=a.width+'px';};
+			};
+			a.bk=setTimeout(function(){
+				a.rotate.style.webkitTransition=a.rotate.style.mozTransition=a.rotate.style.oTransition=a.rotate.style.msTransition=a.rotate.style.transition='left .2s ease 0s';
+				autoRotate();
+			},100);
+		});
+	},toLoadJson=function(callback){
+		glb.delayLoad('http://game.qq.com/time/qqadv/Info_new_'+a.rotID+'.js?v='+Math.random(),callback);
+	};
+	toLoadJson(function(){writeRTs()});
+};
+var report=function(pids){
+    var url="http://isdspeed.qq.com/cgi-bin/r.cgi?",s="flag1="+pids[0]+"&flag2="+pids[1]+"&flag3="+pids[2];
+    if(!glb.brow.isMobile){s+='&20='+(speed_load-speed_start)+'&21='+(speed_all_load-speed_start);}else{s+='&22='+(speed_load-speed_start)+'&23='+(speed_all_load-speed_start);};
+	if(Math.random()<0.3){
+        imgSendTimePoint=new Image();
+        imgSendTimePoint.src=url+s;
+    };
+},visibleDLink=function(){
+	var dlbut=glb.getId('dlbut'),tag=glb.getId('dls'),
+		a={
+			w:dlbut.clientWidth,
+			h:dlbut.clientHeight,
+			hd:glb.offsetT(dlbut),
+			wd:glb.offsetL(dlbut),
+			c:null,st:null,sl:null,o:42
+		},mousePointer=function(e){
+			var e=e||window.event;
+			if(setArea(e)){
+				a.c=tag.className;
+				tag.className=(/hidenACT/i.test(a.c))?a.c.replace(/hidenACT/i,'visibleACT'):(/visibleACT/i.test(a.c))?a.c:a.c+' visibleACT';
+			}else{
+				a.c=tag.className;
+				if(/visibleACT/i.test(a.c)){
+					tag.className=a.c.replace(/visibleACT/i,'hidenACT');
+				}else{return;};
+			};
+		},reSetPointer=function(){
+			a.hd=glb.offsetT(dlbut)-42;
+			a.wd=glb.offsetL(dlbut);
+		},setArea=function(e){
+			a.areaX_s=a.wd;
+			a.areaX_e=a.wd+a.w;
+			a.areaY_s=a.hd;
+			a.areaY_e=a.hd+a.h;
+			var x=e.clientX+a.sl,y=e.clientY-a.o+a.st;
+			return (x<a.areaX_s||x>a.areaX_e||y<a.areaY_s||y>a.areaY_e)?false:true;
+		},setScroll=function(){
+			a.st=glb.st();
+			a.sl=glb.sl();
+		};
+	setScroll();
+	glb.addEvent(glb.d,'mousemove',mousePointer,false);
+	glb.addEvent(window,'resize',reSetPointer,false);
+	glb.addEvent(window,'scroll',setScroll,false);
+},appFds=function(){
+	var self=this,fds=glb.newElem('div'),s='<strong class="pictips"><b class="app-tit">下载天刀官方助手</b><i class="app-ifo">领取50万修为</i></strong><span class="ewmarea"><img alt="天刀助手二维码" src="http://ossweb-img.qq.com/images/wuxia/picture/wuxia-app-for-android.png"></span><span class="but ots blk"><a href="javascript:window.scrollTo(0,500);" class="ota">01&nbsp;精彩活动</a></span><span class="but ots blk bds"><a href="javascript:window.scrollTo(0,1166);" class="ota">02&nbsp;版本内容</a></span><span class="but ots blk"><a href="javascript:window.scrollTo(0,1680);" class="ota">03&nbsp;八荒门派</a></span><span class="but ots ent"><a href="http://wuxia.qq.com/main.shtml" class="ota" onclick="pgvSendClick({hottag:&apos;ydyv.vs1.fds.enter&apos;});" target="_blank">进入官网</a><sup class="spr-c pretag"></sup></span><span class="but ots dlg"><a href="javascript:openMiniLoad(1);" class="ota" onclick="pgvSendClick({hottag:&apos;ydyv.vs1.fds.dlgame&apos;});" target="_blank">游戏下载</a><sup class="spr-c pretag"></sup></span><a class="totop spr-c" href="javascript:window.scrollTo(0,0);">Top</a>';
+	fds.className='fds';fds.id='fds';
+	fds.innerHTML=s;
+	glb.d.body.appendChild(fds);
+}(),demandVideo={
+	mask:glb.getId('mask'),
+	layerdt:glb.getId('layerdt'),
+	lydt:glb.getId('lydt'),
+	more:glb.getId('more'),
+	lks:['',['t0015i9kmsx','index.shtml?page=1'],['g0016ycwnty','index.shtml?page=4'],['w0016ie18q7','index.shtml?page=7']],
+	showVideo:function(n){
+		this.mask.style.cssText='display:block;height:'+glb.wh()+'px;';
+		this.layerdt.style.display='block';
+		if(this.lks[n]){
+			this.more.href='http://wuxia.qq.com/gamedata/features/'+this.lks[n][1];
+			this.more.style.display='block';
+		}else{
+			this.more.style.display='none';
+		};
+		video.reAppVideo({tag:'lydt',index:n,auto:true});
+	},
+	closeVideo:function(){
+		this.mask.style.display=this.layerdt.style.display='none';
+		this.lydt.innerHTML='';
+	}
+},dlDateUpload=function(w){
+	pgvSendClick({hottag:'index.downbtn.client.'+w});
+},unitHandle=function(){
+	var units=glb.getId('units'),unit=glb.getClass('unit',units,'li'),aucer={tgc:units.className},biuldElem=function(g){
+		var el=glb.newElem(g.el);el.className=g.cl||'';el.id=g.id||'';aucer.cl=el.className;return el;
+	},curFunc=function(n,b){
+		insettag.innerHTML=assembleString(n);
+		if(1==b){units.appendChild(insettag);};
+	},assembleString=function(n){
+		var s='',c=null;
+		c=data_game_united.lists[n];
+		s+='<div class="cotpart"><h3>'+c.united_name+'<em class="pa spr-2 tag"></em></h3><p class="mp-tw">'+c.tw+'</p><p class="mp-yw">'+c.yw+'</p><p class="mp-level"><b>操作难度</b>';
+		for(var k=0,sun=5;k<sun;k++){if(k<c.level){s+='<i class="has"></i>';}else{s+='<i class="nos"></i>';};};
+		s+='</p><p class="more"><a class="morer" href="'+c.lk+'" target="_blank">查看更多<i>+</i></a></p><div class="mp-role"></div></div>';
+		insettag.className=(aucer.cl)?aucer.cl+' '+c.cl:c.cl;
+		units.className=aucer.tgc+' cur-'+c.cl;
+		return s;
+	},lisUnitOver=function(){
+		for(var i=0,len=unit.length;i<len;i++){
+			(function(n){unit[n].onmouseenter=function(){curFunc(n);};})(i);
+		};
+	},insettag=biuldElem({el:'li',cl:'unit-info'});
+	lisUnitOver();
+	glb.delayLoad('http://ossweb-img.qq.com/images/wuxia/web201501/datas/gamedata_united.js?v='+Math.random(),function(){curFunc(0,1);});
+}(),eventLayer=function(){
+	var eventlayer=glb.getId('eventlayer')/*,a={
+		taba:glb.getClass('taba',eventlayer,'a'),
+		tabt:glb.getClass('tabt',eventlayer,'div')
+	},tabChange=function(n){
+		if(glb.cura&&glb.curt){
+			glb.cura.className=glb.cura.className.replace(/ cur/i,'');
+			glb.curt.style.display='none';
+		};
+		glb.cura=glb.taba[n];glb.curt=glb.tabt[n];
+		glb.cura.className+=' cur';
+		glb.curt.style.display='block';
+	}*/;
+	glb.taba=glb.getClass('taba',eventlayer,'a');
+	glb.tabt=glb.getClass('tabt',eventlayer,'div');
+	for(var i=0,len=glb.taba.length;i<len;i++){
+		(function(n){glb.taba[n].onclick=function(){tabChange(n);};})(i);
+	};
+	//tabChange(0);
+}()
+,tabChange=function(n){
+	if(glb.cura&&glb.curt){
+		glb.cura.className=glb.cura.className.replace(/ cur/i,'');
+		glb.curt.style.display='none';
+	};
+	glb.cura=glb.taba[n];glb.curt=glb.tabt[n];
+	glb.cura.className+=' cur';
+	glb.curt.style.display='block';
+}
+,openMiniLoad=function(n){
+	showDialog.show({id:'eventlayer'});
+	tabChange(n);
+};
+speed_load=new Date();
+glb.delayLoadPic(glb.getId('wrap'));
+var main=new Main();
+if(!glb.brow.isMobile){
+	glb.d.body.style.paddingTop='42px';glb.delayLoad("http://ossweb-img.qq.com/images/js/title.js",function(){ostb_int();});
+};
+glb.addEvent(window,'load',function(){
+	speed_all_load=new Date();
+	glb.delayLoad("http://tajs.qq.com/stats?sId=30480237",function(){
+		glb.delayLoad("http://pingjs.qq.com/ping_tcss_ied.js",function(){
+			if(typeof(pgvMain)=='function'){pgvMain();if(!glb.brow.isMobile){pgvSendClick({hottag:'ydy.os.pc'});}else{pgvSendClick({hottag:'ydy.os.mobile'});};};
+			glb.delayLoad("http://ossweb-img.qq.com/images/wuxia/common/auto-run-layer.js",function(){if(!(typeof(showDialog)=='object')){glb.delayLoad("http://ossweb-img.qq.com/images/js/comm/showDialog.min.js");};});
+		});
+	});
+    report([7718,82,3]);
+});
+var video=new MoreEquipmentVideo({vidQuery:['f0020v4l5a7']});
+</script><div class="fds" id="fds"><strong class="pictips"><b class="app-tit">下载天刀官方助手</b><i class="app-ifo">领取50万修为</i></strong><span class="ewmarea"><img alt="天刀助手二维码" src="http://ossweb-img.qq.com/images/wuxia/picture/wuxia-app-for-android.png"></span><span class="but ots blk"><a href="javascript:window.scrollTo(0,500);" class="ota">01&nbsp;精彩活动</a></span><span class="but ots blk bds"><a href="javascript:window.scrollTo(0,1166);" class="ota">02&nbsp;版本内容</a></span><span class="but ots blk"><a href="javascript:window.scrollTo(0,1680);" class="ota">03&nbsp;八荒门派</a></span><span class="but ots ent"><a href="http://wuxia.qq.com/main.shtml" class="ota" onclick="pgvSendClick({hottag:'ydyv.vs1.fds.enter'});" target="_blank">进入官网</a><sup class="spr-c pretag"></sup></span><span class="but ots dlg"><a href="javascript:openMiniLoad(1);" class="ota" onclick="pgvSendClick({hottag:'ydyv.vs1.fds.dlgame'});" target="_blank">游戏下载</a><sup class="spr-c pretag"></sup></span><a class="totop spr-c" href="javascript:window.scrollTo(0,0);">Top</a></div><script src="http://ossweb-img.qq.com/images/wuxia/web201501/datas/gamedata_united.js?v=0.9327917727641761"></script><script src="http://game.qq.com/time/qqadv/Info_new_14888.js?v=0.13042708137072623"></script>
+<script src="http://wuxia.qq.com/webplat/download2/static/static.shtml" charset="gb2312"></script>
+
+<script src="http://ossweb-img.qq.com/images/js/eas/eas.js" type="text/javascript"></script><script src="http://dr.game.qq.com/dr.php" type="text/javascript"></script><script src="http://tajs.qq.com/stats?sId=30480237"></script><script src="http://pingjs.qq.com/ping_tcss_ied.js"></script><script src="http://ossweb-img.qq.com/images/wuxia/common/auto-run-layer.js"></script><script src="http://wuxia.qq.com/webplat/info/news_version3/5012/5013/20176/m3482/index.js?timer0.8396804069634527"></script><script src="http://ossweb-img.qq.com/images/js/comm/showDialog.min.js"></script></body></html>

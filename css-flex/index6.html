@@ -1,19 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
-<title>文字列表无缝向上滚动JavaScript代码</title>
-<style>
-*{margin:0px;padding:0px;border:0px;}
-body{font-size:12px}
-
-
-</style>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
+	<title>文字列表无缝向上滚动JavaScript代码</title>
+    <style type="text/css">
+        body {
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
 
-<script> 
+    <div id="div">hehe</div>
+
+<script type="text/javascript" src="https://qianbao.baidu.com/static/cms/activity-static/mobile/comedy/jquery.min.js"></script>
+<script>
+    function Animal() {
+        this.name = 'Animal';
+        this.showName = function() {
+            alert(this.name);
+        }
+    }
+    function Cat() {
+        this.name = 'Cat';
+    }
+
+    var animal = new Animal();
+    var cat = new Cat();
+    //var a = 
+    animal.showName.call(cat);
+
 
 </script> 
 </body>

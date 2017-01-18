@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=0,width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <script src="../js/lib/react.js"></script>
+    <script src="../js/lib/react-dom.js"></script>
+    <script src="../js/lib/browser.min.js"></script>
+    <script type="text/javascript" src="../js/lib/zepto.js"></script>
+
+    <style type="text/css">
+    	#catgoryList {
+    		position: relative;
+    		background-color: #bbb;
+    	}
+    	#catgoryList:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 3px;
+			background-color: #bbb;
+		}
+    	.item {
+    		line-height: 22px;
+    		padding: 10px 20px 10px 0;
+    		border-bottom: dashed 2px white;
+    	}
+    	.radio {
+    		display: inline-block;
+    		width: 20px; 
+    		height: 20px;
+    		line-height: 22px;
+    		margin-right: 6px;
+    		text-align: center;
+    		color: red;
+    		font-weight: bold;
+    		font-size: 18px;
+    		border: solid 2px red;
+    		border-radius: 100%;
+    	}
+    	.arrow {
+		    font-size: 20px;
+    		float: right;
+    	}
+    	.depth0 {
+    		margin-left: 20px;
+    	}
+    	.depth1 {
+    		margin-left: 50px;
+    	}
+       	.depth2 {
+    		margin-left: 80px;
+    	}
+    	.depth3 {
+    		margin-left: 110px;
+    	}
+    	.depth4 {
+    		margin-left: 140px;
+    	}
+    	.depth5 {
+    		margin-left: 170px;
+    	}
+    </style>
+  </head>
+  <body id="box">
+    <div id="example"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div id="btn" class="btn">haha</div>
+    <script type="text/babel">
+      var box=document.getElementById('btn');
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

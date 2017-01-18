@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>多叉树递归</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.min.css">
+    <style type="text/css">
+    	body {
+    		background-color: white;
+    	}
+    	
+
+    </style>
+</head>
+<body>
+	
+	<canvas id="can" width="300" height="1000"></canvas>
+
+</body>
+<script type="text/javascript" src="../js/lib/zepto.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<script type="text/javascript">
+	function draw1(id) {
+            var canvas = document.getElementById(id);
+            if (canvas == null)
+                return false;
+            var context = canvas.getContext("2d");
+            context.fillStyle = "#EEEEFF";
+            context.fillRect(0, 0, 400, 300);
+            var n = 0;
+            var dx = 150;
+            var dy = 150;
+            var s = 100;
+            context.beginPath();
+            context.fillStyle = 'rgb(100,255,100)';
+            context.strokeStyle = 'rgb(0,0,100)';
+            var x = Math.sin(0);
+            var y = Math.cos(0);
+            var dig = Math.PI / 15 * 11;
+            for (var i = 0; i < 30; i++) {
+                var x = Math.sin(i * dig);
+                var y = Math.cos(i * dig);
+                context.lineTo(dx + x * s, dy + y * s);
+            }
+            context.closePath();
+            context.fill();
+            context.stroke();
+
+        }
+
+    draw1('can');
+</script>
+
+</html>
+ 
