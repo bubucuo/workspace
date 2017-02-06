@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>内部高度明确</title>
+    <title>内部高度明确,负外边距之垂直居中</title>
     <link rel="stylesheet" type="text/css" href="../css/common.min.css">
     <style type="text/css">
         html, body {
@@ -18,23 +18,23 @@
             background-color: red;
         }
         .content {
-            position:absolute;
-            width:200px;
-            height:200px;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            margin:auto;
+            width: 300px;  
+            height: 200px;  
+            padding: 20px;  
             background-color: green;
+            position: absolute;  
+            top: 50%; left: 50%;  
+            margin-left: -170px; /* (width + padding)/2 */  /*或者用  box-sizing: border-box; 然后取width/2*/
+            margin-top: -120px; /* (height + padding)/2 */ 
         }
     </style>
 </head>
 <body>
-   
+
 <div class="outer">
-    <div class="content">
-    </div>
+        <div class="content">
+            高度不明确
+        </div>
 </div>
 
 </body>
