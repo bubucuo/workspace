@@ -11,6 +11,7 @@ function simpleSelectionSort(a) { //选择排序
     }
     return a;
 }
+
 //冒泡
 function bubbleSort(a) {
     var n = a.length;
@@ -71,6 +72,7 @@ function heapSort(a) {
     } 
     return a2; 
 }
+
 //快速排序（分治）
 function quickSort(a) {
     var n = a.length;
@@ -96,5 +98,54 @@ function quickSort(a) {
         if(right.length>1)
             right = quickSort(right);
         return left.concat(right);
+    }
+}
+
+//基数排序（桶排序）
+function radixSort(a) {
+    var n = a.length;
+    var bucketCount = 10;
+    var bucket = [], radix;
+    var remainder = 1, maxDigit = 1;
+
+    while(true) {
+        bucket = [];
+        for(var i=0; i<n; i++) {
+            if(remainder==1 && getNoLength(a[i])>maxDigit) {
+                maxDigit = getNoLength(a[i]);
+            }
+            radix = getNoDigit(a[i],remainder-1);
+            if(typeof bucket[radix] == "object") {
+                bucket[radix].push(a[i]);
+            } else {
+                bucket[radix] = [a[i]];
+            }
+        }
+        a = []
+        for(var i=0; i<10; i++) {
+            if(typeof bucket[i] == "object") {
+                a = a.concat(bucket[i])
+            }
+
+        }
+        if(remainder==maxDigit) {
+            break;
+        } else {          
+            remainder++;
+        }
+    }
+    return a;
+}
+function getNoLength(n) {//获得数字的长度
+    var s = n + "";
+    return s.length;
+}
+function getNoDigit(n,i) {//获得数字n的倒数第i位，i从0开始
+    var s = (n + "");
+    s = s.split("").reverse();
+    if(i>s.length-1) {
+        return 0;
+    } else {
+        return s[i];
     }
 }
