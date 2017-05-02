@@ -184,3 +184,28 @@ function mergeArray(left, right) {//合并两个有序数组
     a = a.concat(right.slice(j,nr));
     return a;
 }
+
+//7. 插入排序
+function insertSort(a) {
+    if(a.length<1) {
+        return a;
+    }
+    var tem = [a[0]];
+    for(var i=1; i<a.length; i++) {
+        tem = insertToSortedArray(a[i], tem);
+    }
+    return tem;
+}
+function insertToSortedArray(n, a) {//把n插入有序数组a中
+    var i;
+    for(i=0; i<a.length; i++) {
+        if(a[i]>n) {//插入a[i]前
+            break;
+        }
+    }
+    for(var j=a.length; j>i; j--) {
+        a[j] = a[j-1];
+    }
+    a[i] = n;
+    return a;
+}
