@@ -1,4 +1,4 @@
-//选择排序
+//1. 选择排序
 function simpleSelectionSort(a) { //选择排序
     var tem;
     for(var i=0; i<a.length-1; i++) {
@@ -12,7 +12,7 @@ function simpleSelectionSort(a) { //选择排序
     return a;
 }
 
-//冒泡
+//2. 冒泡
 function bubbleSort(a) {
     var n = a.length;
     for(var i=0; i<n-1; i++) {
@@ -26,7 +26,7 @@ function bubbleSort(a) {
     return a;
 }
 
-//堆排序
+//3. 堆排序
 function getLog(a, r) {
     var i = 0;
     while(true) {
@@ -73,7 +73,7 @@ function heapSort(a) {
     return a2; 
 }
 
-//快速排序（分治）
+//4. 快速排序（分治）
 function quickSort(a) {
     var n = a.length;
     var soilder = a[n-1];
@@ -101,7 +101,7 @@ function quickSort(a) {
     }
 }
 
-//基数排序（桶排序）
+//5. 基数排序（桶排序）
 function radixSort(a) {
     var n = a.length;
     var bucketCount = 10;
@@ -148,4 +148,39 @@ function getNoDigit(n,i) {//获得数字n的倒数第i位，i从0开始
     } else {
         return s[i];
     }
+}
+
+//6. 归并排序
+function mergeSort(a) {
+    var n = a.length;
+    if(n<=1) {
+        return a;
+    } else if(n==2) {
+        if(a[0]>a[1]) {
+            [a[0], a[1]] = [a[1], a[0]]
+        }
+        return a;
+    } else {
+        var mid = Math.floor(n/2);
+        var left = a.slice(0,mid), right = a.slice(mid);
+        left = mergeSort(left);
+        right = mergeSort(right);
+        a = mergeArray(left, right);
+        return a;
+    }
+}
+function mergeArray(left, right) {//合并两个有序数组
+    var a = [];
+    var nl = left.length, nr = right.length;
+    var i = 0, j = 0;
+    while(i<nl&&j<nr) {
+        if(left[i]<right[j]) {
+            a.push(left[i++]);
+        } else {
+            a.push(right[j++]);
+        }
+    }
+    a = a.concat(left.slice(i,nl));
+    a = a.concat(right.slice(j,nr));
+    return a;
 }
