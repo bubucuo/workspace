@@ -185,7 +185,7 @@ function mergeArray(left, right) {//合并两个有序数组
     return a;
 }
 
-//7. 插入排序
+//7. 直接插入排序
 function insertSort(a) {
     if(a.length<1) {
         return a;
@@ -207,5 +207,31 @@ function insertToSortedArray(n, a) {//把n插入有序数组a中
         a[j] = a[j-1];
     }
     a[i] = n;
+    return a;
+}
+
+//8. shell排序
+function shellSort(a) {
+    var gap = parseInt(a.length/2);
+    while(gap>=1) {
+        a = shellInsertSort(a, gap)
+        gap = parseInt(gap/2);
+    }
+    return a;
+}
+function shellInsertSort(a, gap) {
+    var j, tem;
+    for(var i=gap; i<a.length; i++) {
+        if(a[i]<a[i-gap]) {
+            j = i-gap;
+            tem = a[i];
+            a[i] = a[j];
+            while(tem<a[j]) {
+                a[j+gap] = a[j];
+                j -= gap;
+            }
+            a[j+gap] = tem;
+        }
+    }
     return a;
 }
