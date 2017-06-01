@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>单行文字溢出则显示省略号</title>
+    <style type="text/css">
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 16px
+        }
+        /*下面的这个css属性在chrome中遇到汉字，有时候会有省略号的.被隐藏，只显示已个或者两个，最后还是用js比较保险*/
+        /*div {
+            margin: 0px;
+            padding: 0;
+            border: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 200px;
+            height: 20px;
+            background-color: red;
+            letter-spacing: 1px;
+        }*/
+        .outer {
+            width: 200px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .inner {
+            display: inline-block;
+        }
+        .addDot {
+            position: relative;
+        }
+        .addDot:after {
+            content: "...";
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">但是是大多但是是大大大大</div>
+    </div>
+    
+<script src="../js/lib/jquery.min.js"></script>
+<script>
+    var inner = $(".inner").width();
+    console.log(inner);
+    if(inner>=190) {
+        $(".inner").css("width", "190px").addClass("addDot")
+    }    
+</script>
+</body>
+</html>
