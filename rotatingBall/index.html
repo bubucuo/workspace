@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>渐变颜色的圆</title>
+    <style type="text/css">
+        .arc {
+          width: 100px;
+          height: 100px;
+          margin: 100px auto;
+          border-radius: 100%;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,from(orange), to(red));
+          animation-name: mymove;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          animation-timing-function: cubic-bezier(.01,.02,.8,.9);
+
+        }
+        @keyframes mymove {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="arc"><div class="inner"></div></div>
+    
+<script src="../js/lib/jquery.min.js"></script>
+<script src="../js/lib/vue.js"></script>
+<script language="javascript" type="text/javascript">
+</script>
+</body>
+</html>
